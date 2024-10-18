@@ -1,17 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Post from './Components/Post'
+import { useState } from "react";
+import "./App.css";
+import Post from "./Components/Post";
+import styles from "../app.module.css";
+import Newpost from "./Components/Newpost";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <Post />
+      <Newpost />
+      <div className={styles.div1}>
+        <Post author="collins  Minene" />
+        <Post body="am learning frontend development with udemy masterclass" />
+      </div>
+
+      <div className={styles.div1}>
+        <Post author="collins  Minene" />
+        <Post body="am learning frontend development with udemy masterclass" />
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
